@@ -1,0 +1,5 @@
+I have been reviewing max value and see that 21,000,000 is about a high as you can go,
+I added a text field to enter values other than the dropdown - (71234 or 22099999)
+I updated the min and max values to be 70000 and 21000000 in the dropdown and the validation
+I added a validation button to the manual text entry field
+This will not chnage the original version  

@@ -1,0 +1,17 @@
+D:\Visual Studio 2015\Projects\SetStartMoney\Source\SetStartMoney\SetStartMoney\bin\Debug\SetStartMoney.dll
+D:\Visual Studio 2015\Projects\SetStartMoney\Source\SetStartMoney\SetStartMoney\bin\Debug\SetStartMoney.pdb
+D:\Visual Studio 2015\Projects\SetStartMoney\Source\SetStartMoney\SetStartMoney\bin\Debug\Assembly-CSharp.dll
+D:\Visual Studio 2015\Projects\SetStartMoney\Source\SetStartMoney\SetStartMoney\bin\Debug\ColossalManaged.dll
+D:\Visual Studio 2015\Projects\SetStartMoney\Source\SetStartMoney\SetStartMoney\bin\Debug\ICities.dll
+D:\Visual Studio 2015\Projects\SetStartMoney\Source\SetStartMoney\SetStartMoney\bin\Debug\UnityEngine.dll
+D:\Visual Studio 2015\Projects\SetStartMoney\Source\SetStartMoney\SetStartMoney\bin\Debug\Assembly-CSharp-firstpass.dll
+D:\Visual Studio 2015\Projects\SetStartMoney\Source\SetStartMoney\SetStartMoney\bin\Debug\ICSharpCode.SharpZipLib.dll
+D:\Visual Studio 2015\Projects\SetStartMoney\Source\SetStartMoney\SetStartMoney\bin\Debug\UnityEngine.xml
+D:\Visual Studio 2015\Projects\SetStartMoney\Source\SetStartMoney\SetStartMoney\obj\Debug\SetStartMoney.csprojResolveAssemblyReference.cache
+D:\Visual Studio 2015\Projects\SetStartMoney\Source\SetStartMoney\SetStartMoney\obj\Debug\SetStartMoney.dll
+D:\Visual Studio 2015\Projects\SetStartMoney\Source\SetStartMoney\SetStartMoney\obj\Debug\SetStartMoney.pdb
+D:\Documents\Visual Studio 2017\Projects\SetStartMoney\Source\SetStartMoney\SetStartMoney\bin\Debug\SetStartMoney.dll
+D:\Documents\Visual Studio 2017\Projects\SetStartMoney\Source\SetStartMoney\SetStartMoney\bin\Debug\SetStartMoney.pdb
+D:\Documents\Visual Studio 2017\Projects\SetStartMoney\Source\SetStartMoney\SetStartMoney\obj\Debug\SetStartMoney.dll
+D:\Documents\Visual Studio 2017\Projects\SetStartMoney\Source\SetStartMoney\SetStartMoney\obj\Debug\SetStartMoney.pdb
+D:\Documents\Visual Studio 2017\Projects\SetStartMoney\Source\SetStartMoney\SetStartMoney\obj\Debug\SetStartMoney.csprojResolveAssemblyReference.cache

@@ -15,15 +15,19 @@ namespace SetStartMoney
     {
         private UserSettings us = new UserSettings();
 
+        private UIButton Validate;
+        private UIButton Save;
+
         private UITextField Instructions;
         private UITextField StartMoney;
+        private UITextField NewMoney;
         private UIDropDown MyDropDown;
 
-        private string[] vals = new string[] { "50000", "100000", "200000", "250000", "300000", "350000", "400000", "450000", "500000", "550000", "600000", "650000", "700000", "750000", "800000", "850000", "900000", "950000", "1000000", "1500000", "2000000", "2500000", "3000000", "3500000", "4000000", "4500000", "5000000", "5500000", "6000000", "6500000", "7000000", "7500000", "8000000", "8500000", "9000000", "9500000", "10000000", "10500000", "11000000", "11500000", "12000000", "12500000", "13000000", "13500000", "14000000", "14500000", "15000000", "15500000", "16000000", "16500000", "17000000", "17500000", "18000000", "18500000", "19000000", "19500000", "20000000", "20500000", "21000000", "21500000", "22000000", "22500000", "23000000", "23500000", "24000000", "24500000", "25000000", "25500000", "26000000", "26500000", "27000000", "27500000", "28000000", "28500000", "29000000", "29500000", "30000000", "30500000", "31000000", "31500000", "32000000", "32500000", "33000000", "33500000", "34000000", "34500000", "35000000", "35500000", "36000000", "36500000", "37000000", "37500000", "38000000", "38500000", "39000000", "39500000", "40000000", "40500000", "41000000", "41500000", "42000000", "42500000", "43000000", "43500000", "44000000", "44500000", "45000000", "45500000", "46000000", "46500000", "47000000", "47500000", "48000000", "48500000", "49000000", "49500000", "50000000" };
+        private string[] vals = new string[] { "70000", "100000", "200000", "250000", "300000", "350000", "400000", "450000", "500000", "550000", "600000", "650000", "700000", "750000", "800000", "850000", "900000", "950000", "1000000", "1500000", "2000000", "2500000", "3000000", "3500000", "4000000", "4500000", "5000000", "5500000", "6000000", "6500000", "7000000", "7500000", "8000000", "8500000", "9000000", "9500000", "10000000", "10500000", "11000000", "11500000", "12000000", "12500000", "13000000", "13500000", "14000000", "14500000", "15000000", "15500000", "16000000", "16500000", "17000000", "17500000", "18000000", "18500000", "19000000", "19500000", "20000000", "20500000", "21000000" };
 
         public string Name { get { return "SetStartMoney"; } }
         public string Description { get { return "Set the amount of Start Money you want!"; } }
-
+        
         private void EventCheck(bool c)
         {
             us.Enabled = c;
@@ -44,9 +48,25 @@ namespace SetStartMoney
             StartMoney.text = vals[sel];
         }
 
+        private void Validate_Clicked()
+        {
+            int val = 0;
+            int.TryParse(NewMoney.text, out val);
+
+            bool valid = (val >= 70000 && val <= 21000000);
+
+            if (valid)
+            {
+                us.StartMoney = val;
+                StartMoney.text = val.ToString();
+            }
+            else
+                NewMoney.text = us.StartMoney.ToString();
+        }
+
         private void EventTextChanged(string c)
         {
-            //Debug.Log(c);
+            Validate.enabled = !(c == StartMoney.text);
         }
 
         private void EventTextSubmitted(string c)
@@ -56,7 +76,7 @@ namespace SetStartMoney
 
         public void OnSettingsUI(UIHelperBase helper)
         {
-            UIHelperBase group = helper.AddGroup("Set Start Money");
+            UIHelperBase group = helper.AddGroup("Set Start Money value from 70,000 to 21,000,000");
             Instructions = (UITextField)group.AddTextfield("Instructions", "Check to enable, select the value you want for start money.", EventTextChanged, EventTextSubmitted);
             Instructions.readOnly = true;
             Instructions.multiline = true;
@@ -65,12 +85,23 @@ namespace SetStartMoney
             group.AddSpace(30);
 
             group.AddCheckbox("Enable Start Money", us.Enabled, EventCheck);
-            StartMoney = (UITextField)group.AddTextfield("Current Start Money Value", us.StartMoney.ToString(), EventTextChanged, EventTextSubmitted); Instructions.readOnly = true;
+            
+            StartMoney = (UITextField)group.AddTextfield("Current Value:", us.StartMoney.ToString(), EventTextChanged, EventTextSubmitted);
             StartMoney.readOnly = true;
-            MyDropDown = (UIDropDown) group.AddDropdown("Select an amount of start money", vals, GetSelection(), EventSel);
 
-            group.AddSpace(250);
-            group.AddButton("Save", EventClick);
+            MyDropDown = (UIDropDown)group.AddDropdown("Use the list of values", vals, GetSelection(), EventSel);
+
+            NewMoney = (UITextField)group.AddTextfield("Or enter a value. (70k - 21m)", us.StartMoney.ToString(), EventTextChanged, EventTextSubmitted);
+            
+            Validate = (UIButton)group.AddButton("Validate manually entered value", Validate_Clicked);
+            Validate.enabled = false;
+
+            MyDropDown.isVisible = us.Enabled;
+            StartMoney.isVisible = us.Enabled;
+            Validate.isVisible = us.Enabled;
+
+            group.AddSpace(150);
+            Save = (UIButton) group.AddButton("Save", EventClick);
         }
 
         private int GetSelection()
