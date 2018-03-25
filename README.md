@@ -19,13 +19,14 @@ There is an xml file created named, SetStartMoney.xml. You can enter your own va
 
 Example of the xml file
 
-...xml
+```xml
+
 <?xml version="1.0" encoding="UTF-8"?>
 <UserSettings>
 <Enabled>True</Enabled>
 <StartMoney>800000</StartMoney>
 </UserSettings>
-...
+```
 
 GitHub - https://github.com/RickDeschenes/Skylines-SetStartMoney
 
