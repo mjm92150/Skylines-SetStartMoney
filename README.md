@@ -1,3 +1,4 @@
+
 # Skylines-SetStartMoney
 A Start Money MOD with a dropdown
 
@@ -18,11 +19,13 @@ Select or enter a value
 There is an xml file created named, SetStartMoney.xml. You can enter your own value here, for example: 178345. I do not remove bad charactors and values, and these will work as negative start money values. (Too large for the Game to handle)
 
 Example of the xml file
+[
 <?xml version="1.0" encoding="UTF-8"?>
 <UserSettings>
 <Enabled>True</Enabled>
 <StartMoney>800000</StartMoney>
 </UserSettings>
+]
 
 GitHub - https://github.com/RickDeschenes/Skylines-SetStartMoney
 
