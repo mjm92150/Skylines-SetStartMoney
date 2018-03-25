@@ -31,7 +31,7 @@ Example of the xml file
 GitHub - https://github.com/RickDeschenes/Skylines-SetStartMoney
 
 Honerable Mentions:
-- All the other Start Money Mods, (ZERO-THE-FOXY)
+All the other Start Money Mods, (ZERO-THE-FOXY)
  - http://steamcommunity.com/sharedfiles/filedetails/?id=787046552
  - http://steamcommunity.com/sharedfiles/filedetails/?id=787044573
  - http://steamcommunity.com/sharedfiles/filedetails/?id=787043202
