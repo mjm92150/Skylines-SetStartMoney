@@ -7,7 +7,6 @@ A text field and a validation button allow the user to enter in any numeric valu
 This would conflict with other Start Money MODS with a race case.
 
 How do I adjust the value:
-
 1. Open Content Manager (Main Menu)
 2. Select MODS
 3. Locate SETStartMoney in the right panel
