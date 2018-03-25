@@ -28,11 +28,11 @@ Example of the xml file
 GitHub - https://github.com/RickDeschenes/Skylines-SetStartMoney
 
 Honerable Mentions:
-All the other Start Money Mods, (ZERO-THE-FOXY)
-http://steamcommunity.com/sharedfiles/filedetails/?id=787046552
-http://steamcommunity.com/sharedfiles/filedetails/?id=787044573
-http://steamcommunity.com/sharedfiles/filedetails/?id=787043202
-http://steamcommunity.com/sharedfiles/filedetails/?id=787041567
-http://steamcommunity.com/sharedfiles/filedetails/?id=786676430
-http://steamcommunity.com/sharedfiles/filedetails/?id=412378122
-http://steamcommunity.com/sharedfiles/filedetails/?id=408051079
+- All the other Start Money Mods, (ZERO-THE-FOXY)
+ - http://steamcommunity.com/sharedfiles/filedetails/?id=787046552
+ - http://steamcommunity.com/sharedfiles/filedetails/?id=787044573
+ - http://steamcommunity.com/sharedfiles/filedetails/?id=787043202
+ - http://steamcommunity.com/sharedfiles/filedetails/?id=787041567
+ - http://steamcommunity.com/sharedfiles/filedetails/?id=786676430
+ - http://steamcommunity.com/sharedfiles/filedetails/?id=412378122
+ - http://steamcommunity.com/sharedfiles/filedetails/?id=408051079
