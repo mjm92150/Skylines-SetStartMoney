@@ -26,7 +26,7 @@ namespace SetStartMoney
         private string[] vals = new string[] { "70000", "100000", "200000", "250000", "300000", "350000", "400000", "450000", "500000", "550000", "600000", "650000", "700000", "750000", "800000", "850000", "900000", "950000", "1000000", "1500000", "2000000", "2500000", "3000000", "3500000", "4000000", "4500000", "5000000", "5500000", "6000000", "6500000", "7000000", "7500000", "8000000", "8500000", "9000000", "9500000", "10000000", "10500000", "11000000", "11500000", "12000000", "12500000", "13000000", "13500000", "14000000", "14500000", "15000000", "15500000", "16000000", "16500000", "17000000", "17500000", "18000000", "18500000", "19000000", "19500000", "20000000", "20500000", "21000000" };
 
         public string Name { get { return "SetStartMoney"; } }
-        public string Description { get { return "Set the amount of Start Money you want!"; } }
+        public string Description { get { return "Définissez le montant d'argent de départ que vous souhaitez !"; } }
         
         private void EventCheck(bool c)
         {
@@ -76,24 +76,24 @@ namespace SetStartMoney
 
         public void OnSettingsUI(UIHelperBase helper)
         {
-            UIHelperBase group = helper.AddGroup("Set Start Money value from 70,000 to 21,000,000");
-            Instructions = (UITextField)group.AddTextfield("Instructions", "Check to enable, select the value you want for start money.", EventTextChanged, EventTextSubmitted);
+            UIHelperBase group = helper.AddGroup("Définissez la valeur de départ du mod Start Money de 70 000 à 21 000 000");
+            Instructions = (UITextField)group.AddTextfield("Instructions", "Cochez pour activer, sélectionnez la valeur souhaitée pour l'argent de départ.", EventTextChanged, EventTextSubmitted);
             Instructions.readOnly = true;
             Instructions.multiline = true;
             Instructions.width += 250;
             Instructions.height += 30;
             group.AddSpace(30);
 
-            group.AddCheckbox("Enable Start Money", us.Enabled, EventCheck);
+            group.AddCheckbox("Activer le mod Start Money", us.Enabled, EventCheck);
             
-            StartMoney = (UITextField)group.AddTextfield("Current Value:", us.StartMoney.ToString(), EventTextChanged, EventTextSubmitted);
+            StartMoney = (UITextField)group.AddTextfield("Valeur actuelle :", us.StartMoney.ToString(), EventTextChanged, EventTextSubmitted);
             StartMoney.readOnly = true;
 
-            MyDropDown = (UIDropDown)group.AddDropdown("Use the list of values", vals, GetSelection(), EventSel);
+            MyDropDown = (UIDropDown)group.AddDropdown("Utilisez la liste des valeurs", vals, GetSelection(), EventSel);
 
-            NewMoney = (UITextField)group.AddTextfield("Or enter a value. (70k - 21m)", us.StartMoney.ToString(), EventTextChanged, EventTextSubmitted);
+            NewMoney = (UITextField)group.AddTextfield("Ou entrez une valeur. (70k - 21m)", us.StartMoney.ToString(), EventTextChanged, EventTextSubmitted);
             
-            Validate = (UIButton)group.AddButton("Validate manually entered value", Validate_Clicked);
+            Validate = (UIButton)group.AddButton("Valider la valeur entrée manuellement", Validate_Clicked);
             Validate.enabled = false;
 
             MyDropDown.isVisible = us.Enabled;
@@ -101,7 +101,7 @@ namespace SetStartMoney
             Validate.isVisible = us.Enabled;
 
             group.AddSpace(150);
-            Save = (UIButton) group.AddButton("Save", EventClick);
+            Save = (UIButton) group.AddButton("Sauvegarder", EventClick);
         }
 
         private int GetSelection()
@@ -130,7 +130,7 @@ namespace SetStartMoney
                 }
                 catch (Exception ex)
                 {
-                    Debug.Log("Error setting Cash Amount./n" + ex);
+                    Debug.Log("Erreur lors de la définition du montant en espèces./n" + ex);
                 }
             }
         }
@@ -140,7 +140,7 @@ namespace SetStartMoney
     {
         #region Declarations
 
-        private string[] settings = new string[] { "Enabled", "StartMoney" };
+        private string[] settings = new string[] { "Activé", "StartMoney" };
 
         private bool _Enabled = false;
         public bool Enabled { get { return _Enabled; } set { _Enabled = value; } }
@@ -183,14 +183,14 @@ namespace SetStartMoney
             }
             catch (Exception ex)
             {
-                Debug.Log("Error in UserSettings.Save loc: " + loc + "./n" + ex);
+                Debug.Log("Erreur dans UserSettings.Save loc :" + loc + "./n" + ex);
             }
             xml.Save(us);
         }
 
         private void FillSettings()
         {
-            _Enabled = ValidateSetting("Enabled", false);
+            _Enabled = ValidateSetting("Activé", false);
             _StartMoney = ValidateSetting("StartMoney", 50000);
         }
 
